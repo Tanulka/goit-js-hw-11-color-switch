@@ -8,14 +8,17 @@ btnStartEl.addEventListener('click', handleStartChangeBgColor);
 
 let timerInt;
 function handleStartChangeBgColor() {
+  changeRandomColor();
   btnStartEl.setAttribute('disabled', '');
-  timerInt = setInterval(() => {
-    bodyEl.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
-  }, 1000);
+  timerInt = setInterval(func, 1000);
+}
 
-  function randomIntegerFromInterval(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+function randomIntegerFromInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function changeRandomColor() {
+  bodyEl.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
 }
 
 btnStopEl.addEventListener('click', handleStop);
