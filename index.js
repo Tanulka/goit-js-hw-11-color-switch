@@ -10,7 +10,7 @@ let timerInt;
 function handleStartChangeBgColor() {
   changeRandomColor();
   btnStartEl.setAttribute('disabled', '');
-  timerInt = setInterval(func, 1000);
+  timerInt = setInterval(changeRandomColor, 1000);
 }
 
 function randomIntegerFromInterval(min, max) {
