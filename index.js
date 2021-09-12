@@ -18,7 +18,7 @@ function randomIntegerFromInterval(min, max) {
 }
 
 function changeRandomColor() {
-  bodyEl.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
+  bodyEl.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
 }
 
 btnStopEl.addEventListener('click', handleStop);
