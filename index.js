@@ -25,5 +25,5 @@ btnStopEl.addEventListener('click', handleStop);
 
 function handleStop() {
   btnStartEl.removeAttribute('disabled');
-  const stopInt = clearInterval(timerInt);
+  clearInterval(timerInt);
 }
